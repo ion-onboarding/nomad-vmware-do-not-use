@@ -9,12 +9,25 @@
 # How to use this repo
 - clone the repo
 ```
-git clone git@github.com:ion-onboarding/nomad-vmware.git
+git clone https://github.com/ion-onboarding/nomad-vmware.git
 ```
 
 - change directory
 ```
 cd nomad-vmware
+```
+
+## License (optional)
+- check `vm-variables.tf`
+- modify variables __`consul_enterprise_enabled`__, __`nomad_enterprise_enabled`__ & __`vault_enterprise_enabled`__
+  - __true__: install enterprise version
+  - __false__: install OSS version
+
+- add license
+```
+echo "CONSUL-LICENSE" > ./licenses/consul.hclic
+echo "NOMAD-LICENSE" > ./licenses/nomad.hclic
+echo "VAULT-LICENSE" > ./licenses/vault.hclic
 ```
 
 ## Create infrastructure
