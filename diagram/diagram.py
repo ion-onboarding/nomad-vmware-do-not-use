@@ -17,14 +17,14 @@ graph_attr = {
     }
 
 with Diagram("architecture", filename="diagram", direction="TB",outformat=outformat, graph_attr=graph_attr):
-    with Cluster("vmware"):
+    with Cluster("VMARE"):
         with Cluster("NOMAD REGION global"):
-            with Cluster("SERVERS"):
+            with Cluster("SERVERS INFRA"):
                 consul1_global = Consul("consul")
                 nomad1_global = Nomad("nomad")
                 vault1_global = Vault("vault")
             with Cluster("NOMAD DATACENTER dc1"):
                 client1 = Nomad("client")
-                nomad1_global - Edge(penwidth = "4", lhead = "cluster_NOMAD DATACENTER dc1", ltail="cluster_SERVERS", minlen="2") - client1
-                consul1_global - Edge(penwidth = "4", lhead = "cluster_NOMAD DATACENTER dc1", ltail="cluster_SERVERS", minlen="2") - client1
-                vault1_global - Edge(penwidth = "4", lhead = "cluster_NOMAD DATACENTER dc1", ltail="cluster_SERVERS", minlen="2") - client1
+                nomad1_global - Edge(penwidth = "4", lhead = "cluster_NOMAD DATACENTER dc1", ltail="cluster_SERVERS INFRA", minlen="2") - client1
+                consul1_global - Edge(penwidth = "4", lhead = "cluster_NOMAD DATACENTER dc1", ltail="cluster_SERVERS INFRA", minlen="2") - client1
+                vault1_global - Edge(penwidth = "4", lhead = "cluster_NOMAD DATACENTER dc1", ltail="cluster_SERVERS INFRA", minlen="2") - client1
