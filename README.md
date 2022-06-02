@@ -1,5 +1,12 @@
 # nomad-vmware
 
+[nomad architecture reference](https://learn.hashicorp.com/tutorials/nomad/production-reference-architecture-vm-with-consul?in=nomad/enterprise)
+
+![](pic-hashicorp-vmware.png)
+
+## Diagram
+![](./diagram/diagram.png)
+
 # How to use this repo
 - clone the repo
 ```
