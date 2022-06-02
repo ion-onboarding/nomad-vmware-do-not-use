@@ -18,7 +18,7 @@ cd nomad-vmware
 ```
 
 ## Create infrastructure
-- rename and adjust file `terraform.tfvars.example` (or create your own terraform.tfvars)
+- rename `terraform.tfvars.example` into `terraform.tfvars` and adjust vcenter settings
 - initialize working directory
 ```
 terraform init
