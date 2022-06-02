@@ -1,6 +1,5 @@
 # nomad-vmware
-
-[nomad architecture reference](https://learn.hashicorp.com/tutorials/nomad/production-reference-architecture-vm-with-consul?in=nomad/enterprise)
+- deploy nomad following [nomad architecture reference](https://learn.hashicorp.com/tutorials/nomad/production-reference-architecture-vm-with-consul?in=nomad/enterprise)
 
 ![](pic-hashicorp-vmware.png)
 
@@ -19,6 +18,7 @@ cd nomad-vmware
 ```
 
 ## Create infrastructure
+- rename and adjust file `terraform.tfvars.example` (or create your own terraform.tfvars)
 - initialize working directory
 ```
 terraform init
