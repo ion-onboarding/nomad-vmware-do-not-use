@@ -4,7 +4,3 @@ provider "vsphere" {
   password             = var.vsphere_password
   allow_unverified_ssl = var.vsphere_insecure
 }
-
-resource "random_pet" "name" {
-  length = 2
-}

@@ -40,10 +40,10 @@ variable "nomad_datacenter" {
   default     = "dc1"
 }
 
+
 #
 # Consul
 #
-
 variable "consul_vm_num_cpus" {
   description = "CPU number"
   type        = number
@@ -81,7 +81,6 @@ variable "consul_datacenter" {
 #
 # Vault
 #
-
 variable "vault_vm_num_cpus" {
   description = "CPU number"
   type        = number
@@ -111,20 +110,20 @@ variable "vault_instances_count" {
   default     = 1
 }
 
+
 #
 # Client
 #
-
 variable "client_vm_num_cpus" {
   description = "CPU number"
   type        = number
-  default     = 1
+  default     = 2
 }
 
 variable "client_vm_memory" {
   description = "Memory in MB"
   type        = number
-  default     = 1024
+  default     = 2048
 }
 
 variable "client_instances_count" {

@@ -1,4 +1,4 @@
-# # tag that will be attached to all resources
+# tag that will be attached to all resources
 variable "main_project_tag" {}
 
 # provider vars
@@ -12,3 +12,5 @@ variable "vsphere_datacenter" {}
 variable "vsphere_network" {}
 variable "vsphere_cluster" {}
 variable "vsphere_datastore" {}
+
+# for vm specific variables check vm-variables.tf

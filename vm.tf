@@ -1,3 +1,7 @@
+resource "random_pet" "name" {
+  length = 2
+}
+
 resource "vsphere_tag_category" "terraform_project" {
   name        = "${var.main_project_tag}-${random_pet.name.id}"
   cardinality = "SINGLE"

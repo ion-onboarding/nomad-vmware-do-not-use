@@ -13,7 +13,7 @@ graph_attr = {
     "compound":"true",
     "splines":"spline",
     "bgcolor": "white",
-    "fontsize": "45",
+    "fontsize": "35",
     }
 
 with Diagram("architecture", filename="diagram", direction="TB",outformat=outformat, graph_attr=graph_attr):
