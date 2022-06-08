@@ -84,6 +84,8 @@ resource "vsphere_virtual_machine" "nomad" {
 resource "vsphere_virtual_machine" "consul" {
   count = var.consul_instances_count
   name  = "consul-${random_pet.name.id}-${count.index}"
+  
+  folder = vsphere_folder.vm.path
 
   datacenter_id    = data.vsphere_datacenter.datacenter.id
   datastore_id     = data.vsphere_datastore.datastore.id
@@ -126,6 +128,8 @@ resource "vsphere_virtual_machine" "vault" {
   count = var.vault_instances_count
   name  = "vault-${random_pet.name.id}-${count.index}"
 
+  folder = vsphere_folder.vm.path
+  
   datacenter_id    = data.vsphere_datacenter.datacenter.id
   datastore_id     = data.vsphere_datastore.datastore.id
   host_system_id   = data.vsphere_host.host.id # host system ID is required for ovf deployment
@@ -167,6 +171,8 @@ resource "vsphere_virtual_machine" "client" {
   count = var.client_instances_count
   name  = "client-${random_pet.name.id}-${count.index}"
 
+  folder = vsphere_folder.vm.path
+  
   datacenter_id    = data.vsphere_datacenter.datacenter.id
   datastore_id     = data.vsphere_datastore.datastore.id
   host_system_id   = data.vsphere_host.host.id # host system ID is required for ovf deployment
